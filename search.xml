@@ -8,6 +8,19 @@
 ]]></content>
   </entry>
   <entry>
+    <title>test1</title>
+    <url>/2022/08/30/test1/</url>
+    <content><![CDATA[<p>This is a test artical </p>
+]]></content>
+      <categories>
+        <category>Speech Enhancement</category>
+      </categories>
+      <tags>
+        <tag>Speech Enhancement</tag>
+        <tag>Array Signal Process</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TriU-Net demo</title>
     <url>/2023/03/20/TriU-Net_demo/</url>
     <content><![CDATA[<p>作者: Kelan Kuang<br>Email: <a href="mailto:&#x6b;&#117;&#x61;&#110;&#103;&#x6b;&#101;&#x6c;&#x61;&#110;&#x40;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x69;&#111;&#x61;&#46;&#97;&#x63;&#46;&#x63;&#x6e;">&#x6b;&#117;&#x61;&#110;&#103;&#x6b;&#101;&#x6c;&#x61;&#110;&#x40;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x69;&#111;&#x61;&#46;&#97;&#x63;&#46;&#x63;&#x6e;</a></p>
@@ -151,19 +164,6 @@
         <tag>Beamforming</tag>
         <tag>Deep Neural Network</tag>
         <tag>Microphone Array</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test1</title>
-    <url>/2022/08/30/test1/</url>
-    <content><![CDATA[<p>This is a test artical </p>
-]]></content>
-      <categories>
-        <category>Speech Enhancement</category>
-      </categories>
-      <tags>
-        <tag>Speech Enhancement</tag>
-        <tag>Array Signal Process</tag>
       </tags>
   </entry>
 </search>
