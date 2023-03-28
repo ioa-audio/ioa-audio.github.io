@@ -168,4 +168,184 @@
         <tag>Microphone Array</tag>
       </tags>
   </entry>
+  <entry>
+    <title>CTF-MNMF demo</title>
+    <url>/2023/03/27/CTFMNMF_demo/</url>
+    <content><![CDATA[<p>作者: Taihui Wang<br>Email: <a href="mailto:&#x77;&#x61;&#x6e;&#x67;&#x74;&#x61;&#105;&#104;&#x75;&#105;&#x40;&#x6d;&#97;&#105;&#x6c;&#46;&#105;&#111;&#x61;&#x2e;&#97;&#x63;&#46;&#99;&#110;">&#x77;&#x61;&#x6e;&#x67;&#x74;&#x61;&#105;&#104;&#x75;&#105;&#x40;&#x6d;&#97;&#105;&#x6c;&#46;&#105;&#111;&#x61;&#x2e;&#97;&#x63;&#46;&#99;&#110;</a></p>
+<h1 id="Convolutive-Transfer-Function-Based-Multichannel-Nonnegative-Matrix-Factorization-for-Overdetermined-Blind-Source-Separation"><a href="#Convolutive-Transfer-Function-Based-Multichannel-Nonnegative-Matrix-Factorization-for-Overdetermined-Blind-Source-Separation" class="headerlink" title="Convolutive Transfer Function-Based Multichannel Nonnegative Matrix Factorization for Overdetermined Blind Source Separation"></a>Convolutive Transfer Function-Based Multichannel Nonnegative Matrix Factorization for Overdetermined Blind Source Separation</h1><p>Taihui Wang <sup>1</sup><sup>, 2</sup>  , Feiran Yang <sup>3</sup>  , Member, IEEE, and Jun Yang <sup>1</sup><sup>, 2</sup>  , Senior Member, IEEE</p>
+<p><sup>1</sup>  Key Laboratory of Noise and Vibration Research, Institute of Acoustics, Chinese Academy of Sciences, Beijing,<br>China</p>
+<p> <sup>2</sup> University of Chinese Academy of Sciences, Beijing, China</p>
+<p> <sup>3</sup> State Key Laboratory of Acoustics, Institute of Acoustics, Chinese Academy of Sciences, Beijing, China</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Most multichannel blind source separation (BSS) approaches rely on a spatial model to encode the transfer functions<br>from sources to microphones and a source model to encode the source power spectral density. The rank-1 spatial model has been widely exploited in independent component analysis (ICA), independent vector analysis (IVA), and independent low-rank matrix analysis (ILRMA). The full-rank spatial model is also considered in many BSS approaches, such as full-rank spatial covariance matrix analysis (FCA), multichannel nonnegative matrix factorization (MNMF), and FastMNMF, which can improve the separation performance in the case of long reverberation times. This paper proposes a new MNMF framework based on the convolutive transfer function (CTF) for overdetermined BSS. The time-domain convolutive mixture model is approximated by a frequency-wise convolutive mixture model instead of the widely adopted frequency-wise instantaneous mixture model. The iterative projection algorithm is adopted to estimate the demixing matrix, and the multiplicative update rule is employed to estimate nonnegative matrix factorization (NMF) parameters. Finally, the source image is reconstructed using a multichannel Wiener ﬁlter. The advantages of the proposed method are twofold. First, the CTF approximation enables us to use a short window to represent long impulse responses. Second, the full-rank spatial model can be derived based on the CTF approximation and slowly time-variant source variances, and close relationships between the proposed method and ILRMA, FCA, MNMF and FastMNMF are revealed. Extensive experiments show that the proposed algorithm achieves a higher separation performance than ILRMA and FastMNMF in reverberant environments.</p>
+<h2 id="Separated-audio-samples"><a href="#Separated-audio-samples" class="headerlink" title="Separated audio samples"></a>Separated audio samples</h2><p>The following table shows an example of the 2-music source separation task, where the public NMF model is used and the number of bases is set to 32.  The reverberation time is 470 ms, and the channel number is 6. </p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-c3ow">Source 1</th>
+    <th class="tg-c3ow">Source 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Clean reverberant sources</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Mixture at the first microphone</td>
+    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/sep1UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/sep2UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+  </tr>
+</tbody>
+</table>
+
+
+<p>The following table shows an example of the 2-speech source separation task, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 470 ms, and the channel number is 6.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-c3ow">Source 1</th>
+    <th class="tg-c3ow">Source 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Clean reverberant sources</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Mixture at the first microphone</td>
+    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/separated1.wav?raw=true" controls></td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/separated2.wav?raw=true" controls></td>
+  </tr>
+</tbody>
+</table>
+
+<p>The following table shows an example of the 2-speech source separation task, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 1300 ms, and the channel number is 6.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-c3ow">Source 1</th>
+    <th class="tg-c3ow">Source 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Clean reverberant sources</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/image1.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/image2.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Mixture at the first microphone</td>
+    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/mixture.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/separated1.wav?raw=true" controls></td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/separated2.wav?raw=true" controls></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<p>The following table shows an example of the 4- speech source separation tast, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 470 ms, and the channel number is 8.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0p91{border-color:inherit;font-family:"Times New Roman", Times, serif !important;text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-iucd{border-color:inherit;font-family:"Times New Roman", Times, serif !important;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-iucd"></th>
+    <th class="tg-c3ow">Source 1</th>
+    <th class="tg-c3ow">Source 2</th>
+    <th class="tg-0pky">Source 3</th>
+    <th class="tg-0pky">Source 4</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0p91">Clean sources</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
+    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image3.wav?raw=true" controls></td>
+    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image4.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-0p91">Mixture at the first microphone</td>
+    <td class="tg-c3ow" colspan="4"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-0p91">Separated sources uing CTF-MNMF</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep1UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep2UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep3UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep4UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+  </tr>
+</tbody>
+</table>
+## Other samples
+
+<p>For more audio samples, the reader is referred to <a href="https://github.com/TaihuiWang/CTF-MNMF">TaihuiWang/CTF-MNMF (github.com)</a></p>
+]]></content>
+      <categories>
+        <category>Blind Source Separation</category>
+      </categories>
+      <tags>
+        <tag>Blind Source Separation</tag>
+        <tag>Nonnegative Matrix Analysis</tag>
+        <tag>Convolutive Transfer function</tag>
+        <tag>Spatial Covariance Matrix</tag>
+      </tags>
+  </entry>
 </search>
