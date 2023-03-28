@@ -259,7 +259,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-28 09:08:31" itemprop="dateModified" datetime="2023-03-28T09:08:31+08:00">2023-03-28</time>
+                <time title="Modified: 2023-03-28 09:15:32" itemprop="dateModified" datetime="2023-03-28T09:15:32+08:00">2023-03-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -282,12 +282,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>作者: Taihui Wang<br>Email: <a href="mailto:&#x77;&#x61;&#x6e;&#x67;&#x74;&#x61;&#105;&#104;&#x75;&#105;&#x40;&#x6d;&#97;&#105;&#x6c;&#46;&#105;&#111;&#x61;&#x2e;&#97;&#x63;&#46;&#99;&#110;">&#x77;&#x61;&#x6e;&#x67;&#x74;&#x61;&#105;&#104;&#x75;&#105;&#x40;&#x6d;&#97;&#105;&#x6c;&#46;&#105;&#111;&#x61;&#x2e;&#97;&#x63;&#46;&#99;&#110;</a></p>
+          <p>作者: Taihui Wang<br>Email: <a href="mailto:&#x77;&#97;&#110;&#x67;&#x74;&#x61;&#105;&#104;&#x75;&#x69;&#64;&#109;&#x61;&#105;&#108;&#46;&#x69;&#111;&#97;&#x2e;&#x61;&#x63;&#46;&#99;&#110;">&#x77;&#97;&#110;&#x67;&#x74;&#x61;&#105;&#104;&#x75;&#x69;&#64;&#109;&#x61;&#105;&#108;&#46;&#x69;&#111;&#97;&#x2e;&#x61;&#x63;&#46;&#99;&#110;</a></p>
 <h1 id="Convolutive-Transfer-Function-Based-Multichannel-Nonnegative-Matrix-Factorization-for-Overdetermined-Blind-Source-Separation"><a href="#Convolutive-Transfer-Function-Based-Multichannel-Nonnegative-Matrix-Factorization-for-Overdetermined-Blind-Source-Separation" class="headerlink" title="Convolutive Transfer Function-Based Multichannel Nonnegative Matrix Factorization for Overdetermined Blind Source Separation"></a>Convolutive Transfer Function-Based Multichannel Nonnegative Matrix Factorization for Overdetermined Blind Source Separation</h1><p>Taihui Wang <sup>1</sup><sup>, 2</sup>  , Feiran Yang <sup>3</sup>  , Member, IEEE, and Jun Yang <sup>1</sup><sup>, 2</sup>  , Senior Member, IEEE</p>
 <p><sup>1</sup>  Key Laboratory of Noise and Vibration Research, Institute of Acoustics, Chinese Academy of Sciences, Beijing,<br>China</p>
 <p> <sup>2</sup> University of Chinese Academy of Sciences, Beijing, China</p>
 <p> <sup>3</sup> State Key Laboratory of Acoustics, Institute of Acoustics, Chinese Academy of Sciences, Beijing, China</p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Most multichannel blind source separation (BSS) approaches rely on a spatial model to encode the transfer functions<br>from sources to microphones and a source model to encode the source power spectral density. The rank-1 spatial model has been widely exploited in independent component analysis (ICA), independent vector analysis (IVA), and independent low-rank matrix analysis (ILRMA). The full-rank spatial model is also considered in many BSS approaches, such as full-rank spatial covariance matrix analysis (FCA), multichannel nonnegative matrix factorization (MNMF), and FastMNMF, which can improve the separation performance in the case of long reverberation times. This paper proposes a new MNMF framework based on the convolutive transfer function (CTF) for overdetermined BSS. The time-domain convolutive mixture model is approximated by a frequency-wise convolutive mixture model instead of the widely adopted frequency-wise instantaneous mixture model. The iterative projection algorithm is adopted to estimate the demixing matrix, and the multiplicative update rule is employed to estimate nonnegative matrix factorization (NMF) parameters. Finally, the source image is reconstructed using a multichannel Wiener ﬁlter. The advantages of the proposed method are twofold. First, the CTF approximation enables us to use a short window to represent long impulse responses. Second, the full-rank spatial model can be derived based on the CTF approximation and slowly time-variant source variances, and close relationships between the proposed method and ILRMA, FCA, MNMF and FastMNMF are revealed. Extensive experiments show that the proposed algorithm achieves a higher separation performance than ILRMA and FastMNMF in reverberant environments.</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Most multichannel blind source separation (BSS) approaches rely on a spatial model to encode the transfer functions from sources to microphones and a source model to encode the source power spectral density. The rank-1 spatial model has been widely exploited in independent component analysis (ICA), independent vector analysis (IVA), and independent low-rank matrix analysis (ILRMA). The full-rank spatial model is also considered in many BSS approaches, such as full-rank spatial covariance matrix analysis (FCA), multichannel nonnegative matrix factorization (MNMF), and FastMNMF, which can improve the separation performance in the case of long reverberation times. This paper proposes a new MNMF framework based on the convolutive transfer function (CTF) for overdetermined BSS. The time-domain convolutive mixture model is approximated by a frequency-wise convolutive mixture model instead of the widely adopted frequency-wise instantaneous mixture model. The iterative projection algorithm is adopted to estimate the demixing matrix, and the multiplicative update rule is employed to estimate nonnegative matrix factorization (NMF) parameters. Finally, the source image is reconstructed using a multichannel Wiener ﬁlter. The advantages of the proposed method are twofold. First, the CTF approximation enables us to use a short window to represent long impulse responses. Second, the full-rank spatial model can be derived based on the CTF approximation and slowly time-variant source variances, and close relationships between the proposed method and ILRMA, FCA, MNMF and FastMNMF are revealed. Extensive experiments show that the proposed algorithm achieves a higher separation performance than ILRMA and FastMNMF in reverberant environments.</p>
 <h2 id="Separated-audio-samples"><a href="#Separated-audio-samples" class="headerlink" title="Separated audio samples"></a>Separated audio samples</h2><p>The following table shows an example of the 2-music source separation task, where the public NMF model is used and the number of bases is set to 32.  The reverberation time is 470 ms, and the channel number is 6. </p>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -664,74 +664,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://ioa-audio.github.io/2022/08/30/test1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="IOA-Audio">
-      <meta itemprop="description" content="Audio & Speech Research Group is a research group under the Key Laboratory of Noise and Vibration Research, Institute of Acoustics, Chinese Academy of Sciences.  The Principal Investigator of this research group is Prof. Feiran Yang. Our research interests include Blind Source Separation, Array Signal Processing, Voice Anti-Spoofing, Acoustic Echo Cancellation, Speech Enhancement.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="About Audio & Speech Research Group">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/30/test1/" class="post-title-link" itemprop="url">test1</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2022-08-30 19:29:15 / Modified: 20:25:16" itemprop="dateCreated datePublished" datetime="2022-08-30T19:29:15+08:00">2022-08-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Speech-Enhancement/" itemprop="url" rel="index"><span itemprop="name">Speech Enhancement</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>This is a test artical </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
 
@@ -798,7 +730,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -811,7 +743,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
