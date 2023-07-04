@@ -228,6 +228,143 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://ioa-audio.github.io/2023/06/14/best_sup_mdoel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="IOA-Audio">
+      <meta itemprop="description" content="<br>Audio & Speech Research Group is a research group under the Key Laboratory of Noise and Vibration Research, Institute of Acoustics, Chinese Academy of Sciences. <br />The Principal Investigator of this research group is Prof. Feiran Yang (https://people.ucas.ac.cn/~feiran). Our research interests include Blind Source Separation, Array Signal Processing, Voice Anti-Spoofing, Acoustic Echo Cancellation, Speech Enhancement. Contact us: feiran@mail.ioa.ac.cn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="About Audio & Speech Research Group">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/14/best_sup_mdoel/" class="post-title-link" itemprop="url">Restoration of Bone-Conducted Speech with U-Net-like Model and Energy Distance Loss</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-06-14 19:12:21" itemprop="dateCreated datePublished" datetime="2023-06-14T19:12:21+08:00">2023-06-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-07-04 14:16:40" itemprop="dateModified" datetime="2023-07-04T14:16:40+08:00">2023-07-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Speech-Enhancement/" itemprop="url" rel="index"><span itemprop="name">Speech Enhancement</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Author: Changtao Li<br>Email: <a href="mailto:&#x6c;&#105;&#99;&#x68;&#97;&#110;&#x67;&#116;&#x61;&#111;&#64;&#109;&#97;&#x69;&#x6c;&#46;&#105;&#x6f;&#97;&#x2e;&#x61;&#99;&#x2e;&#x63;&#x6e;">&#x6c;&#105;&#99;&#x68;&#97;&#110;&#x67;&#116;&#x61;&#111;&#64;&#109;&#97;&#x69;&#x6c;&#46;&#105;&#x6f;&#97;&#x2e;&#x61;&#99;&#x2e;&#x63;&#x6e;</a></p>
+<h1 id="Restoration-of-Bone-Conducted-Speech-with-U-Net-like-Model-and-Energy-Distance-Loss"><a href="#Restoration-of-Bone-Conducted-Speech-with-U-Net-like-Model-and-Energy-Distance-Loss" class="headerlink" title="Restoration of Bone-Conducted Speech with U-Net-like Model and Energy Distance Loss"></a>Restoration of Bone-Conducted Speech with U-Net-like Model and Energy Distance Loss</h1><h2 id="Audio-samples"><a href="#Audio-samples" class="headerlink" title="Audio samples"></a>Audio samples</h2><p>We encourage our readers to listen to the following audio samples in order to experience the audio quality of our enhanced speech.</p>
+<table>
+  <tbody>
+    <tr>
+        <th>Signals </th>
+        <th>sample1</th>
+        <th>sample2</th>
+        <th>sample3</th>
+        <th>sample4</th>
+    </tr>
+    <tr>
+      <td>Bone-conducted Speech</td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/bc/bc_11.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/bc/bc_26.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/bc/bc_41.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/bc/bc_47.wav" controls></td>
+    </tr>
+    <tr>
+      <td>Air-conducted Speech</td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/air/ac_11.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/air/ac_26.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/air/ac_41.wav" controls></td>      
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/air/ac_47.wav" controls></td>
+    </tr>
+    <tr>
+      <td>DPT-EGNet</td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/dpt-egnet/sample11.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/dpt-egnet/sample26.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/dpt-egnet/sample41.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/dpt-egnet/sample47.wav" controls></td>
+    </tr>
+    <tr>
+      <td>EBEN</td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/eben/sample11.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/eben/sample26.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/eben/sample41.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/eben/sample47.wav" controls></td>
+    </tr>
+    <tr>
+      <td>Ours (l1 loss)</td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/new_l1/sample11.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/new_l1/sample26.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/new_l1/sample41.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/new_l1/sample47.wav" controls></td>
+    </tr>
+    <tr>
+      <td>Ours (energy loss)</td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/enenrgy/sample_11.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/enenrgy/sample_26.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/enenrgy/sample_41.wav" controls></td>
+      <td><audio src="https://github.com/changtaoli/model-energy/raw/main/enenrgy/sample_47.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+  </colgroup>
+</table>
+
+
+<h2 id="More-samples"><a href="#More-samples" class="headerlink" title="More samples"></a>More samples</h2><p>For more samples,  See <a target="_blank" rel="noopener" href="https://github.com/changtaoli/model-energy">https://github.com/changtaoli/model-energy</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://ioa-audio.github.io/2023/04/04/two-stage-demo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -717,7 +854,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
