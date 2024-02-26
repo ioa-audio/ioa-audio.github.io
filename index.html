@@ -228,6 +228,181 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://ioa-audio.github.io/2024/02/26/demo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="IOA-Audio">
+      <meta itemprop="description" content="<br>Audio & Speech Research Group is a research group under the Key Laboratory of Noise and Vibration Research, Institute of Acoustics, Chinese Academy of Sciences. <br />The Principal Investigator of this research group is Prof. Feiran Yang (https://people.ucas.ac.cn/~feiran). Our research interests include Blind Source Separation, Array Signal Processing, Voice Anti-Spoofing, Acoustic Echo Cancellation, Speech Enhancement. Contact us: feiran@mail.ioa.ac.cn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="About Audio & Speech Research Group">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/26/demo/" class="post-title-link" itemprop="url">Multi-Modal Speech Enhancement with BiNet and Contrastive Learning</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-02-26 21:20:59 / Modified: 21:18:10" itemprop="dateCreated datePublished" datetime="2024-02-26T21:20:59+08:00">2024-02-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Speech-Enhancement/" itemprop="url" rel="index"><span itemprop="name">Speech Enhancement</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Author: Changtao Li<br>Email: <a href="mailto:&#x6c;&#105;&#x63;&#104;&#x61;&#x6e;&#103;&#116;&#97;&#111;&#x40;&#109;&#x61;&#x69;&#x6c;&#46;&#105;&#x6f;&#97;&#46;&#97;&#99;&#46;&#x63;&#110;">&#x6c;&#105;&#x63;&#104;&#x61;&#x6e;&#103;&#116;&#97;&#111;&#x40;&#109;&#x61;&#x69;&#x6c;&#46;&#105;&#x6f;&#97;&#46;&#97;&#99;&#46;&#x63;&#110;</a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>This paper investigates the joint use of bone-conducted and air-conducted speech in a multimodal speech enhancement framework. Starting from the backbone network architecture, we design a temporal two-tower network named after BiNet, capable of directly processing both bone-conducted and noisy air-conducted speech inputs. BiNet employs two independent encoders to map bone-conducted and noisy air-conducted speech into a shared embedding space. A decoder is then utilized to reconstruct the target clean speech from the embedding features of both modalities. Additionally, skip connections are incorporated in BiNet to better capture the long-term and short-term temporal correlations in speech. Considering the significance of spectral components in speech perception, we adopt a multi-scale mel-spectrogram loss function as the training objective, which encourages the network to generate more plausible spectral details of the desired speech. The aforementioned backbone network design allows us to apply regularization constraints based on contrastive learning. By controlling the similarity between the embedding features of bone-conducted and noisy air-conducted speech, we impose two regularization constraints on BiNet. When the embedding features of these two modalities exhibit higher similarity, the proposed BiNet achieves superior speech enhancement performance. Extensive experiments conducted on a recorded dataset of bone-conducted/air-conducted speech validate our approach. By combining the proposed model with contrastive learning regularization constraints, our method outperforms baseline models and several recent multimodal speech enhancement systems in terms of PESQ and STOI metrics. </p>
+<h2 id="Samples"><a href="#Samples" class="headerlink" title="Samples"></a>Samples</h2><p>We encourage our readers to listen to the following audio samples in order to experience the audio quality of our enhanced speech.</p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>-10 dB</td>
+      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/clean.wav" controls></td>
+      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/bone.wav" controls></td>
+      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/noisy.wav" controls></td>
+      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/res.wav" controls></td>
+      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/dn.wav" controls></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/dccrn.wav" controls></td>   
+      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/simple_fuse.wav" controls></td>
+      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/inv.wav" controls></td>
+      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/tt.wav" controls></td>
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/tt_clip.wav" controls></td>     
+      <td></td>
+    </tr>
+    </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>-5 dB</td>
+      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/clean.wav" controls></td>
+      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/bone.wav" controls></td>
+      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/noisy.wav" controls></td>
+      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/res.wav" controls></td>
+      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/dn.wav" controls></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/dccrn.wav" controls></td>   
+      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/simple_fuse.wav" controls></td>
+      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/inv.wav" controls></td>
+      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/tt.wav" controls></td>
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/tt_clip.wav" controls></td>     
+      <td></td>
+    </tr>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>0 dB</td>
+      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/clean.wav" controls></td>
+      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/bone.wav" controls></td>
+      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/noisy.wav" controls></td>
+      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/res.wav" controls></td>
+      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/dn.wav" controls></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/dccrn.wav" controls></td>   
+      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/simple_fuse.wav" controls></td>
+      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/inv.wav" controls></td>
+      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/tt.wav" controls></td>
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/tt_clip.wav" controls></td>     
+      <td></td>
+    </tr>
+    </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>5 dB</td>
+      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/clean.wav" controls></td>
+      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/bone.wav" controls></td>
+      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/noisy.wav" controls></td>
+      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/res.wav" controls></td>
+      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/dn.wav" controls></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/dccrn.wav" controls></td>   
+      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/simple_fuse.wav" controls></td>
+      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/inv.wav" controls></td>
+      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/tt.wav" controls></td>
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/mainpos_5/tt_clip.wav" controls></td>     
+      <td></td>
+    </tr>
+    </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://ioa-audio.github.io/2023/09/15/two-stage-demo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -839,7 +1014,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -887,7 +1062,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
