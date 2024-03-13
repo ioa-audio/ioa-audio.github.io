@@ -251,10 +251,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2024-02-26 21:20:59 / Modified: 21:18:10" itemprop="dateCreated datePublished" datetime="2024-02-26T21:20:59+08:00">2024-02-26</time>
+              <time title="Created: 2024-02-26 21:20:59" itemprop="dateCreated datePublished" datetime="2024-02-26T21:20:59+08:00">2024-02-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-03-13 10:18:16" itemprop="dateModified" datetime="2024-03-13T10:18:16+08:00">2024-03-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -276,7 +282,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Author: Changtao Li<br>Email: <a href="mailto:&#x6c;&#105;&#x63;&#104;&#x61;&#x6e;&#103;&#116;&#97;&#111;&#x40;&#109;&#x61;&#x69;&#x6c;&#46;&#105;&#x6f;&#97;&#46;&#97;&#99;&#46;&#x63;&#110;">&#x6c;&#105;&#x63;&#104;&#x61;&#x6e;&#103;&#116;&#97;&#111;&#x40;&#109;&#x61;&#x69;&#x6c;&#46;&#105;&#x6f;&#97;&#46;&#97;&#99;&#46;&#x63;&#110;</a></p>
+          <p>Author: Changtao Li<br>Email: <a href="mailto:&#108;&#105;&#99;&#x68;&#x61;&#110;&#103;&#116;&#97;&#111;&#64;&#x6d;&#x61;&#105;&#108;&#46;&#x69;&#111;&#x61;&#46;&#x61;&#99;&#x2e;&#x63;&#110;">&#108;&#105;&#99;&#x68;&#x61;&#110;&#103;&#116;&#97;&#111;&#64;&#x6d;&#x61;&#105;&#108;&#46;&#x69;&#111;&#x61;&#46;&#x61;&#99;&#x2e;&#x63;&#110;</a></p>
 <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>This paper investigates the joint use of bone-conducted and air-conducted speech in a multimodal speech enhancement framework. Starting from the backbone network architecture, we design a temporal two-tower network named after BiNet, capable of directly processing both bone-conducted and noisy air-conducted speech inputs. BiNet employs two independent encoders to map bone-conducted and noisy air-conducted speech into a shared embedding space. A decoder is then utilized to reconstruct the target clean speech from the embedding features of both modalities. Additionally, skip connections are incorporated in BiNet to better capture the long-term and short-term temporal correlations in speech. Considering the significance of spectral components in speech perception, we adopt a multi-scale mel-spectrogram loss function as the training objective, which encourages the network to generate more plausible spectral details of the desired speech. The aforementioned backbone network design allows us to apply regularization constraints based on contrastive learning. By controlling the similarity between the embedding features of bone-conducted and noisy air-conducted speech, we impose two regularization constraints on BiNet. When the embedding features of these two modalities exhibit higher similarity, the proposed BiNet achieves superior speech enhancement performance. Extensive experiments conducted on a recorded dataset of bone-conducted/air-conducted speech validate our approach. By combining the proposed model with contrastive learning regularization constraints, our method outperforms baseline models and several recent multimodal speech enhancement systems in terms of PESQ and STOI metrics. </p>
 <h2 id="Samples"><a href="#Samples" class="headerlink" title="Samples"></a>Samples</h2><p>We encourage our readers to listen to the following audio samples in order to experience the audio quality of our enhanced speech.</p>
 <table>
@@ -376,7 +382,7 @@
       <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/simple_fuse.wav" controls></td>
       <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/inv.wav" controls></td>
       <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/tt.wav" controls></td>
-      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/mainpos_5/tt_clip.wav" controls></td>     
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/tt_clip.wav" controls></td>     
       <td></td>
     </tr>
     </tbody>
