@@ -8,6 +8,496 @@
 ]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>/2024/05/24/%E4%B8%BB%E8%A7%82%E6%B5%8B%E8%AF%95-online/</url>
+    <content><![CDATA[<p>Author: Kelan Kuang<br>Email: <a href="mailto:&#107;&#117;&#97;&#x6e;&#103;&#x6b;&#x65;&#x6c;&#x61;&#110;&#64;&#x6d;&#x61;&#x69;&#108;&#46;&#105;&#x6f;&#97;&#46;&#97;&#99;&#x2e;&#99;&#x6e;">&#107;&#117;&#97;&#x6e;&#103;&#x6b;&#x65;&#x6c;&#x61;&#110;&#64;&#x6d;&#x61;&#x69;&#108;&#46;&#105;&#x6f;&#97;&#46;&#97;&#99;&#x2e;&#99;&#x6e;</a></p>
+<h1 id="音频文件质量主观评价测试"><a href="#音频文件质量主观评价测试" class="headerlink" title="音频文件质量主观评价测试"></a>音频文件质量主观评价测试</h1><p>感谢参加本次音频文件主观测试。本次测试分为两个部分，首先是对来自不同系统的同一条语音进行打分（mean opinion score；MOS）；接着受试者需要从两条对比的语音中选择质量更好的一条（paired comparison test）。这两部分测试的具体内容会在每一部分测试的开始进行具体介绍。</p>
+<h2 id="MOS"><a href="#MOS" class="headerlink" title="MOS"></a>MOS</h2><table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>基准语音</td>
+      <td> 1分 <audio src="MOS1__33_snr-13.21dB_noisyR0.95_ch1.wav" controls></td>
+      <td> 2分 <audio src="MOS2__3_snr-14.68dB_noisyR0.81_out.wav" controls></td>
+      <td> 3-4分 <audio src="MOS34__29_snr5.57dB_noisyR0.82_out.wav" controls></td>
+      <td> 5分 <audio src="MOS5__3_snr-14.68dB_noisyR0.81_tgt.wav" controls></td>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+<p>请你对以下语音的可懂度进行打分，打分范围是1-5。其中5分表示语音可懂度很高，主观上完全可以接受，语音完全不刺耳。4分表示对语音的接受程度降低，但不反感该语音。3分表示可以感知到此语音的瑕疵，如电音等刺耳瑕疵。2分表示该语音的刺耳瑕疵非常明显。1分表示完全无法接受该语音且非常反感。我们给出了1分与5分的语音作为参考，你只需要聆听这些语音以获得语音质量的直观感受。请您以这两条语音作为基准，对以下语音样本进行打分。需要说明的是本次测试是为了对语音质量以及可懂度而非语音的内容进行评判，某些语音的口音可能比较重，请您忽略口音相关的问题。下面的每一个Group，例如Group1，包含来自4个不同的语音增强系统（s1-s4）的输出语音，请在评分后将分数记录在对应的Excel表格中。</p>
+<p>极低信噪比: </p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group1</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\FCN_nonCausal_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\ConvTasNet_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\DC_CRN_iAFF_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\DenGCAN_iag2_0_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group2</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\FCN_nonCausal_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\ConvTasNet_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\DC_CRN_iAFF_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\DenGCAN_iag2_0_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group3</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\FCN_nonCausal_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\ConvTasNet_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\DC_CRN_iAFF_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\DenGCAN_iag2_0_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group4</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\FCN_nonCausal_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\ConvTasNet_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\DC_CRN_iAFF_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\DenGCAN_iag2_0_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group5</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\FCN_nonCausal_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\ConvTasNet_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\DC_CRN_iAFF_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\DenGCAN_iag2_0_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group6</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\FCN_nonCausal_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\ConvTasNet_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\DC_CRN_iAFF_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\DenGCAN_iag2_0_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group7</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\FCN_nonCausal_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\ConvTasNet_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\DC_CRN_iAFF_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\DenGCAN_iag2_0_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+
+<p>低信噪比:</p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group8</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\FCN_nonCausal_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\ConvTasNet_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\DC_CRN_iAFF_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\DenGCAN_iag2_0_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group9</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\FCN_nonCausal_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\ConvTasNet_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\DC_CRN_iAFF_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\DenGCAN_iag2_0_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group10</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\FCN_nonCausal_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\ConvTasNet_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\DC_CRN_iAFF_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\DenGCAN_iag2_0_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group11</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\FCN_nonCausal_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\ConvTasNet_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\DC_CRN_iAFF_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\DenGCAN_iag2_0_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group12</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\FCN_nonCausal_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\ConvTasNet_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\DC_CRN_iAFF_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\DenGCAN_iag2_0_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group13</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\FCN_nonCausal_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\ConvTasNet_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\DC_CRN_iAFF_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\DenGCAN_iag2_0_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group14</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\FCN_nonCausal_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\ConvTasNet_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\DC_CRN_iAFF_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\DenGCAN_iag2_0_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+
+<p>中信噪比:</p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group15</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\FCN_nonCausal_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\ConvTasNet_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\DC_CRN_iAFF_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\DenGCAN_iag2_0_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group16</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\FCN_nonCausal_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\ConvTasNet_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\DC_CRN_iAFF_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\DenGCAN_iag2_0_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group17</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\FCN_nonCausal_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\ConvTasNet_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\DC_CRN_iAFF_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\DenGCAN_iag2_0_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group18</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\FCN_nonCausal_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\ConvTasNet_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\DC_CRN_iAFF_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\DenGCAN_iag2_0_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group19</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\FCN_nonCausal_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\ConvTasNet_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\DC_CRN_iAFF_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\DenGCAN_iag2_0_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group20</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\FCN_nonCausal_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\ConvTasNet_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\DC_CRN_iAFF_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\DenGCAN_iag2_0_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group21</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\FCN_nonCausal_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\ConvTasNet_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\DC_CRN_iAFF_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\DenGCAN_iag2_0_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+
+<p>高信噪比:</p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group22</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\FCN_nonCausal_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\ConvTasNet_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\DC_CRN_iAFF_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\DenGCAN_iag2_0_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group23</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\FCN_nonCausal_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\ConvTasNet_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\DC_CRN_iAFF_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\DenGCAN_iag2_0_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group24</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\FCN_nonCausal_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\ConvTasNet_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\DC_CRN_iAFF_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\DenGCAN_iag2_0_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group25</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\FCN_nonCausal_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\ConvTasNet_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\DC_CRN_iAFF_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\DenGCAN_iag2_0_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group26</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\FCN_nonCausal_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\ConvTasNet_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\DC_CRN_iAFF_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\DenGCAN_iag2_0_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group27</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\FCN_nonCausal_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\ConvTasNet_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\DC_CRN_iAFF_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\DenGCAN_iag2_0_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group28</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\FCN_nonCausal_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\ConvTasNet_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\DC_CRN_iAFF_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\DenGCAN_iag2_0_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+]]></content>
+      <categories>
+        <category>Speech Enhancement</category>
+      </categories>
+      <tags>
+        <tag>Deep Neural Network</tag>
+        <tag>Bone-conducted Speech Enhancement</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Multi-Modal Speech Enhancement with BiNet and Contrastive Learning</title>
     <url>/2024/02/26/demo/</url>
     <content><![CDATA[<p>Author: Changtao Li<br>Email: <a href="mailto:&#108;&#105;&#99;&#x68;&#x61;&#110;&#103;&#116;&#97;&#111;&#64;&#x6d;&#x61;&#105;&#108;&#46;&#x69;&#111;&#x61;&#46;&#x61;&#99;&#x2e;&#x63;&#110;">&#108;&#105;&#99;&#x68;&#x61;&#110;&#103;&#116;&#97;&#111;&#64;&#x6d;&#x61;&#105;&#108;&#46;&#x69;&#111;&#x61;&#46;&#x61;&#99;&#x2e;&#x63;&#110;</a></p>
