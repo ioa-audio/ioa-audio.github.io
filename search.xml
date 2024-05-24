@@ -1,621 +1,343 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>TriU-Net demo</title>
+    <url>/2023/03/20/TriU-Net_demo/</url>
+    <content><![CDATA[<p>作者: Kelan Kuang<br>Email: <a href="mailto:&#x6b;&#x75;&#97;&#x6e;&#x67;&#107;&#101;&#x6c;&#x61;&#x6e;&#x40;&#109;&#x61;&#x69;&#108;&#x2e;&#x69;&#111;&#97;&#46;&#x61;&#99;&#x2e;&#99;&#x6e;">&#x6b;&#x75;&#97;&#x6e;&#x67;&#107;&#101;&#x6c;&#x61;&#x6e;&#x40;&#109;&#x61;&#x69;&#108;&#x2e;&#x69;&#111;&#97;&#46;&#x61;&#99;&#x2e;&#99;&#x6e;</a></p>
+<h1 id="Multi-Channel-Speech-Enhancement-results"><a href="#Multi-Channel-Speech-Enhancement-results" class="headerlink" title="Multi-Channel Speech Enhancement results"></a>Multi-Channel Speech Enhancement results</h1><p>This repo shows enhanced speech of TriU-Net and other models.</p>
+<h2 id="Real-recordings"><a href="#Real-recordings" class="headerlink" title="Real recordings"></a>Real recordings</h2><p>SNR: -5 dB</p>
+<p>Spk 1 is a 24-year-old male, while spk 2 is a 24-year-old female. Both spk 1 and spk 2 speek in Mandarin. </p>
+<table>
+  <tbody>
+    <tr>
+        <th>Signals </th>
+        <th>Spk 1 babble</th>
+        <th>Spk 2 babble</th>
+        <th>Spk 1 f16</th>
+        <th>Spk 2 f16</th>
+    </tr>
+    <tr>
+      <td>noisy</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_synth_kkl_babble_snr-5.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/9ULA_synth_kkl_babble_snr-5.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_synth_yzh_babble_snr-5.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/9ULA_synth_yzh_babble_snr-5.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_synth_kkl_babble_snr-5.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/9ULA_synth_kkl_f16_snr-5.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_synth_yzh_f16_snr-5.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/9ULA_synth_yzh_f16_snr-5.wav" controls></td>
+    </tr>
+    <tr>
+      <td>clean</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_kkl_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/9ULA_kkl_clean.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_yzh_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/9ULA_yzh_clean.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_kkl_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/9ULA_kkl_clean.wav" controls></td>      
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_yzh_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/9ULA_yzh_clean.wav" controls></td>
+    </tr>
+    <tr>
+      <td>oracl MB-MVDR</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_oracle_MBMVDR_kkl_babble_snr-5_pesq1.09_1.36.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_oracle_MBMVDR_kkl_babble_snr-5_pesq1.09_1.36.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_oracle_MBMVDR_yzh_babble_snr-5_pesq1.06_1.27.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_oracle_MBMVDR_yzh_babble_snr-5_pesq1.06_1.27.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_oracle_MBMVDR_kkl_f16_snr-5_pesq1.06_1.3.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_oracle_MBMVDR_kkl_f16_snr-5_pesq1.06_1.3.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_oracle_MBMVDR_yzh_f16_snr-5_pesq1.04_1.25.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_oracle_MBMVDR_yzh_f16_snr-5_pesq1.04_1.25.wav" controls></td>
+    </tr>
+    <tr>
+      <td>EaBNet</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_EaBNet_kkl_babble_snr-5_pesq1.09_1.27.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_EaBNet_kkl_babble_snr-5_pesq1.09_1.27.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_EaBNet_yzh_babble_snr-5_pesq1.06_1.33.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_EaBNet_yzh_babble_snr-5_pesq1.06_1.33.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_EaBNet_kkl_f16_snr-5_pesq1.06_1.37.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_EaBNet_kkl_f16_snr-5_pesq1.06_1.37.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_EaBNet_yzh_f16_snr-5_pesq1.04_1.41.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_EaBNet_yzh_f16_snr-5_pesq1.04_1.41.wav" controls></td>
+    </tr>
+    <tr>
+      <td>FaSNet</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_FaSNet_kkl_babble_snr-5_pesq1.09_1.24.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_FaSNet_kkl_babble_snr-5_pesq1.09_1.24.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_FaSNet_yzh_babble_snr-5_pesq1.06_1.23.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_FaSNet_yzh_babble_snr-5_pesq1.06_1.23.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_FaSNet_kkl_f16_snr-5_pesq1.06_1.35.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_FaSNet_kkl_f16_snr-5_pesq1.06_1.35.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_FaSNet_yzh_f16_snr-5_pesq1.04_1.47.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_FaSNet_yzh_f16_snr-5_pesq1.04_1.47.wav" controls></td>
+    </tr>
+    <tr>
+      <td>Model A</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_ModelA_kkl_babble_snr-5_pesq1.09_1.42.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_ModelA_kkl_babble_snr-5_pesq1.09_1.42.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_ModelA_yzh_babble_snr-5_pesq1.06_1.26.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_ModelA_yzh_babble_snr-5_pesq1.06_1.26.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_ModelA_kkl_f16_snr-5_pesq1.06_1.6.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_ModelA_kkl_f16_snr-5_pesq1.06_1.6.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_ModelA_yzh_f16_snr-5_pesq1.04_1.77.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_ModelA_yzh_f16_snr-5_pesq1.04_1.77.wav" controls></td>
+    </tr>
+    <tr>
+        <td><b>TriU-Net</b></td>
+        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_TriU-Net_kkl_babble_snr-5_pesq1.09_1.7.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_TriU-Net_kkl_babble_snr-5_pesq1.09_1.7.wav" controls></td>
+        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_TriU-Net_yzh_babble_snr-5_pesq1.06_1.65.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_TriU-Net_yzh_babble_snr-5_pesq1.06_1.65.wav" controls></td>
+        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_TriU-Net_kkl_f16_snr-5_pesq1.06_1.84.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_TriU-Net_kkl_f16_snr-5_pesq1.06_1.84.wav" controls></td>
+        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_TriU-Net_yzh_f16_snr-5_pesq1.04_1.9.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_TriU-Net_yzh_f16_snr-5_pesq1.04_1.9.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+  </colgroup>
+</table>
+
+
+<span id="more"></span>
+
+
+
+
+<h2 id="Synthetic-Data"><a href="#Synthetic-Data" class="headerlink" title="Synthetic Data"></a>Synthetic Data</h2><table>
+  <tbody>
+    <tr>
+        <th>Signals </th>
+        <th>Spk 1 SNR:-5.36 dB</th>
+        <th>Spk 2 SNR:-3.43 dB</th>
+    </tr>
+    <tr>
+      <td>noisy</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_noisy.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_noisy.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_noisy.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_noisy.wav" controls></td>
+    </tr>
+    <tr>
+      <td>clean</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_clean.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_clean.wav" controls></td>
+    </tr>
+    <tr>
+      <td>EaBNet</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_EaBNet.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_EaBNet.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_EaBNet.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_EaBNet.wav" controls></td>
+    </tr>
+    <tr>
+      <td>FaSNet</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_FaSNet.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_FaSNet.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_FaSNet.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_FaSNet.wav" controls></td>
+    </tr>
+    <tr>
+      <td>Model A</td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_ModelA.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_ModelA.wav" controls></td>
+      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_ModelA.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_ModelA.wav" controls></td>
+    </tr>
+    <tr>
+        <td><b>TriU-Net</b></td>
+        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_TriU-Net.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_TriU-Net.wav" controls></td>
+        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_TriU-Net.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_TriU-Net.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+    <col style="width: 5%;">
+  </colgroup>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="Other-samples"><a href="#Other-samples" class="headerlink" title="Other samples"></a>Other samples</h2><p>Other SNR scenarios  See <a href="https://github.com/CaA23187/TriU-Net_demo">https://github.com/CaA23187/TriU-Net_demo</a></p>
+]]></content>
+      <categories>
+        <category>Speech Enhancement</category>
+      </categories>
+      <tags>
+        <tag>Multi-Channel Speech Enhancement</tag>
+        <tag>Beamforming</tag>
+        <tag>Deep Neural Network</tag>
+        <tag>Microphone Array</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CTF-MNMF demo</title>
+    <url>/2023/03/27/CTFMNMF_demo/</url>
+    <content><![CDATA[<p>作者: Taihui Wang<br>Email: <a href="mailto:&#119;&#97;&#x6e;&#x67;&#x74;&#97;&#105;&#104;&#117;&#x69;&#x40;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x69;&#111;&#x61;&#x2e;&#x61;&#99;&#46;&#x63;&#x6e;">&#119;&#97;&#x6e;&#x67;&#x74;&#97;&#105;&#104;&#117;&#x69;&#x40;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x69;&#111;&#x61;&#x2e;&#x61;&#99;&#46;&#x63;&#x6e;</a></p>
+<h1 id="Convolutive-Transfer-Function-Based-Multichannel-Nonnegative-Matrix-Factorization-for-Overdetermined-Blind-Source-Separation"><a href="#Convolutive-Transfer-Function-Based-Multichannel-Nonnegative-Matrix-Factorization-for-Overdetermined-Blind-Source-Separation" class="headerlink" title="Convolutive Transfer Function-Based Multichannel Nonnegative Matrix Factorization for Overdetermined Blind Source Separation"></a>Convolutive Transfer Function-Based Multichannel Nonnegative Matrix Factorization for Overdetermined Blind Source Separation</h1><p>Taihui Wang <sup>1</sup><sup>, 2</sup>  , Feiran Yang <sup>3</sup>  , Member, IEEE, and Jun Yang <sup>1</sup><sup>, 2</sup>  , Senior Member, IEEE</p>
+<p><sup>1</sup>  Key Laboratory of Noise and Vibration Research, Institute of Acoustics, Chinese Academy of Sciences, Beijing,<br>China</p>
+<p> <sup>2</sup> University of Chinese Academy of Sciences, Beijing, China</p>
+<p> <sup>3</sup> State Key Laboratory of Acoustics, Institute of Acoustics, Chinese Academy of Sciences, Beijing, China</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Most multichannel blind source separation (BSS) approaches rely on a spatial model to encode the transfer functions from sources to microphones and a source model to encode the source power spectral density. The rank-1 spatial model has been widely exploited in independent component analysis (ICA), independent vector analysis (IVA), and independent low-rank matrix analysis (ILRMA). The full-rank spatial model is also considered in many BSS approaches, such as full-rank spatial covariance matrix analysis (FCA), multichannel nonnegative matrix factorization (MNMF), and FastMNMF, which can improve the separation performance in the case of long reverberation times. This paper proposes a new MNMF framework based on the convolutive transfer function (CTF) for overdetermined BSS. The time-domain convolutive mixture model is approximated by a frequency-wise convolutive mixture model instead of the widely adopted frequency-wise instantaneous mixture model. The iterative projection algorithm is adopted to estimate the demixing matrix, and the multiplicative update rule is employed to estimate nonnegative matrix factorization (NMF) parameters. Finally, the source image is reconstructed using a multichannel Wiener filter. The advantages of the proposed method are twofold. First, the CTF approximation enables us to use a short window to represent long impulse responses. Second, the full-rank spatial model can be derived based on the CTF approximation and slowly time-variant source variances, and close relationships between the proposed method and ILRMA, FCA, MNMF and FastMNMF are revealed. Extensive experiments show that the proposed algorithm achieves a higher separation performance than ILRMA and FastMNMF in reverberant environments.</p>
+<h2 id="Separated-audio-samples"><a href="#Separated-audio-samples" class="headerlink" title="Separated audio samples"></a>Separated audio samples</h2><p>The following table shows an example of the 2-music source separation task, where the public NMF model is used and the number of bases is set to 32.  The reverberation time is 470 ms, and the channel number is 6. </p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-c3ow">Source 1</th>
+    <th class="tg-c3ow">Source 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Clean reverberant sources</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Mixture at the first microphone</td>
+    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/sep1UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/sep2UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+  </tr>
+</tbody>
+</table>
+
+
+<span id="more"></span>
+
+
+
+<p>The following table shows an example of the 2-speech source separation task, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 470 ms, and the channel number is 6.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-c3ow">Source 1</th>
+    <th class="tg-c3ow">Source 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Clean reverberant sources</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Mixture at the first microphone</td>
+    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/separated1.wav?raw=true" controls></td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/separated2.wav?raw=true" controls></td>
+  </tr>
+</tbody>
+</table>
+
+<p>The following table shows an example of the 2-speech source separation task, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 1300 ms, and the channel number is 6.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-c3ow">Source 1</th>
+    <th class="tg-c3ow">Source 2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Clean reverberant sources</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/image1.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/image2.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">Mixture at the first microphone</td>
+    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/mixture.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/separated1.wav?raw=true" controls></td>
+    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/separated2.wav?raw=true" controls></td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<p>The following table shows an example of the 4- speech source separation tast, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 470 ms, and the channel number is 8.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0p91{border-color:inherit;font-family:"Times New Roman", Times, serif !important;text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-iucd{border-color:inherit;font-family:"Times New Roman", Times, serif !important;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-iucd"></th>
+    <th class="tg-c3ow">Source 1</th>
+    <th class="tg-c3ow">Source 2</th>
+    <th class="tg-0pky">Source 3</th>
+    <th class="tg-0pky">Source 4</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0p91">Clean sources</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
+    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image3.wav?raw=true" controls></td>
+    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image4.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-0p91">Mixture at the first microphone</td>
+    <td class="tg-c3ow" colspan="4"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
+  </tr>
+  <tr>
+    <td class="tg-0p91">Separated sources uing CTF-MNMF</td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep1UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep2UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep3UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep4UsingCTFMNMF-SDR.wav?raw=true" controls></td>
+  </tr>
+</tbody>
+</table>
+## Other samples
+
+<p>For more audio samples, the reader is referred to <a href="https://github.com/TaihuiWang/CTF-MNMF">TaihuiWang/CTF-MNMF (github.com)</a></p>
+]]></content>
+      <categories>
+        <category>Blind Source Separation</category>
+      </categories>
+      <tags>
+        <tag>Blind Source Separation</tag>
+        <tag>Nonnegative Matrix Analysis</tag>
+        <tag>Convolutive Transfer function</tag>
+        <tag>Spatial Covariance Matrix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>About us</title>
     <url>/2022/08/30/about%20us/</url>
     <content><![CDATA[<h1 id="who-we-are"><a href="#who-we-are" class="headerlink" title="who we are"></a>who we are</h1><p>Audio &amp; Speech Research Group is a research group under the Key Laboratory of Noise and Vibration Research, Institute of Acoustics, Chinese Academy of Sciences. The Principal Investigator of this research group is Prof. <a href="https://people.ucas.ac.cn/~feiran">Feiran Yang</a> (杨飞然). Our research interests include Adaptive Filtering, Blind Source Separation, Array Signal Processing, Voice Anti-Spoofing, Acoustic Echo Cancellation, Speech Enhancement. See <a href="/categories/">HERE</a></p>
 <p>The members of group includes Feiran Yang (杨飞然), Yi Wan (万伊), Taihui Wang (王泰辉), Shengdong Liu (刘升东), Zhengqiang Luo (罗正强), Yang Liu (刘杨), Jinfu Wang (王劲夫), Changtao Li (李长涛), Jing Lei (雷菁), Kelan Kuang (匡柯澜), Qing Shi(石擎), Lan Tang (汤澜), Cong Zhang(张聪), Haobo Jia (贾浩博)</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/05/24/%E4%B8%BB%E8%A7%82%E6%B5%8B%E8%AF%95-online/</url>
-    <content><![CDATA[<p>Author: Kelan Kuang<br>Email: <a href="mailto:&#107;&#117;&#97;&#x6e;&#103;&#x6b;&#x65;&#x6c;&#x61;&#110;&#64;&#x6d;&#x61;&#x69;&#108;&#46;&#105;&#x6f;&#97;&#46;&#97;&#99;&#x2e;&#99;&#x6e;">&#107;&#117;&#97;&#x6e;&#103;&#x6b;&#x65;&#x6c;&#x61;&#110;&#64;&#x6d;&#x61;&#x69;&#108;&#46;&#105;&#x6f;&#97;&#46;&#97;&#99;&#x2e;&#99;&#x6e;</a></p>
-<h1 id="音频文件质量主观评价测试"><a href="#音频文件质量主观评价测试" class="headerlink" title="音频文件质量主观评价测试"></a>音频文件质量主观评价测试</h1><p>感谢参加本次音频文件主观测试。本次测试分为两个部分，首先是对来自不同系统的同一条语音进行打分（mean opinion score；MOS）；接着受试者需要从两条对比的语音中选择质量更好的一条（paired comparison test）。这两部分测试的具体内容会在每一部分测试的开始进行具体介绍。</p>
-<h2 id="MOS"><a href="#MOS" class="headerlink" title="MOS"></a>MOS</h2><table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>基准语音</td>
-      <td> 1分 <audio src="MOS1__33_snr-13.21dB_noisyR0.95_ch1.wav" controls></td>
-      <td> 2分 <audio src="MOS2__3_snr-14.68dB_noisyR0.81_out.wav" controls></td>
-      <td> 3-4分 <audio src="MOS34__29_snr5.57dB_noisyR0.82_out.wav" controls></td>
-      <td> 5分 <audio src="MOS5__3_snr-14.68dB_noisyR0.81_tgt.wav" controls></td>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-
-<p>请你对以下语音的可懂度进行打分，打分范围是1-5。其中5分表示语音可懂度很高，主观上完全可以接受，语音完全不刺耳。4分表示对语音的接受程度降低，但不反感该语音。3分表示可以感知到此语音的瑕疵，如电音等刺耳瑕疵。2分表示该语音的刺耳瑕疵非常明显。1分表示完全无法接受该语音且非常反感。我们给出了1分与5分的语音作为参考，你只需要聆听这些语音以获得语音质量的直观感受。请您以这两条语音作为基准，对以下语音样本进行打分。需要说明的是本次测试是为了对语音质量以及可懂度而非语音的内容进行评判，某些语音的口音可能比较重，请您忽略口音相关的问题。下面的每一个Group，例如Group1，包含来自4个不同的语音增强系统（s1-s4）的输出语音，请在评分后将分数记录在对应的Excel表格中。</p>
-<p>极低信噪比: </p>
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group1</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\FCN_nonCausal_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\ConvTasNet_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\DC_CRN_iAFF_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\DenGCAN_iag2_0_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group2</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\FCN_nonCausal_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\ConvTasNet_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\DC_CRN_iAFF_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\DenGCAN_iag2_0_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group3</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\FCN_nonCausal_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\ConvTasNet_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\DC_CRN_iAFF_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\DenGCAN_iag2_0_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group4</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\FCN_nonCausal_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\ConvTasNet_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\DC_CRN_iAFF_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\DenGCAN_iag2_0_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group5</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\FCN_nonCausal_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\ConvTasNet_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\DC_CRN_iAFF_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\DenGCAN_iag2_0_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group6</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\FCN_nonCausal_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\ConvTasNet_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\DC_CRN_iAFF_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\DenGCAN_iag2_0_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group7</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\FCN_nonCausal_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\ConvTasNet_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\DC_CRN_iAFF_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\DenGCAN_iag2_0_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-
-
-<p>低信噪比:</p>
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group8</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\FCN_nonCausal_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\ConvTasNet_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\DC_CRN_iAFF_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\DenGCAN_iag2_0_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group9</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\FCN_nonCausal_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\ConvTasNet_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\DC_CRN_iAFF_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\DenGCAN_iag2_0_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group10</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\FCN_nonCausal_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\ConvTasNet_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\DC_CRN_iAFF_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\DenGCAN_iag2_0_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group11</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\FCN_nonCausal_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\ConvTasNet_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\DC_CRN_iAFF_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\DenGCAN_iag2_0_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group12</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\FCN_nonCausal_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\ConvTasNet_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\DC_CRN_iAFF_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\DenGCAN_iag2_0_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group13</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\FCN_nonCausal_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\ConvTasNet_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\DC_CRN_iAFF_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\DenGCAN_iag2_0_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group14</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\FCN_nonCausal_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\ConvTasNet_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\DC_CRN_iAFF_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\DenGCAN_iag2_0_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-
-
-<p>中信噪比:</p>
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group15</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\FCN_nonCausal_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\ConvTasNet_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\DC_CRN_iAFF_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\DenGCAN_iag2_0_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group16</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\FCN_nonCausal_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\ConvTasNet_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\DC_CRN_iAFF_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\DenGCAN_iag2_0_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group17</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\FCN_nonCausal_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\ConvTasNet_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\DC_CRN_iAFF_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\DenGCAN_iag2_0_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group18</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\FCN_nonCausal_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\ConvTasNet_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\DC_CRN_iAFF_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\DenGCAN_iag2_0_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group19</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\FCN_nonCausal_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\ConvTasNet_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\DC_CRN_iAFF_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\DenGCAN_iag2_0_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group20</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\FCN_nonCausal_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\ConvTasNet_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\DC_CRN_iAFF_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\DenGCAN_iag2_0_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group21</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\FCN_nonCausal_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\ConvTasNet_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\DC_CRN_iAFF_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\DenGCAN_iag2_0_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-
-
-<p>高信噪比:</p>
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group22</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\FCN_nonCausal_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\ConvTasNet_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\DC_CRN_iAFF_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\DenGCAN_iag2_0_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group23</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\FCN_nonCausal_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\ConvTasNet_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\DC_CRN_iAFF_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\DenGCAN_iag2_0_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group24</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\FCN_nonCausal_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\ConvTasNet_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\DC_CRN_iAFF_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\DenGCAN_iag2_0_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group25</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\FCN_nonCausal_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\ConvTasNet_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\DC_CRN_iAFF_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\DenGCAN_iag2_0_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group26</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\FCN_nonCausal_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\ConvTasNet_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\DC_CRN_iAFF_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\DenGCAN_iag2_0_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group27</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\FCN_nonCausal_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\ConvTasNet_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\DC_CRN_iAFF_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\DenGCAN_iag2_0_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>Group28</td>
-      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\FCN_nonCausal_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
-      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\ConvTasNet_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
-      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\DC_CRN_iAFF_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
-      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\DenGCAN_iag2_0_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-
-]]></content>
-      <categories>
-        <category>Speech Enhancement</category>
-      </categories>
-      <tags>
-        <tag>Deep Neural Network</tag>
-        <tag>Bone-conducted Speech Enhancement</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Multi-Modal Speech Enhancement with BiNet and Contrastive Learning</title>
-    <url>/2024/02/26/demo/</url>
-    <content><![CDATA[<p>Author: Changtao Li<br>Email: <a href="mailto:&#108;&#105;&#99;&#x68;&#x61;&#110;&#103;&#116;&#97;&#111;&#64;&#x6d;&#x61;&#105;&#108;&#46;&#x69;&#111;&#x61;&#46;&#x61;&#99;&#x2e;&#x63;&#110;">&#108;&#105;&#99;&#x68;&#x61;&#110;&#103;&#116;&#97;&#111;&#64;&#x6d;&#x61;&#105;&#108;&#46;&#x69;&#111;&#x61;&#46;&#x61;&#99;&#x2e;&#x63;&#110;</a></p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>This paper investigates the joint use of bone-conducted and air-conducted speech in a multimodal speech enhancement framework. Starting from the backbone network architecture, we design a temporal two-tower network named after BiNet, capable of directly processing both bone-conducted and noisy air-conducted speech inputs. BiNet employs two independent encoders to map bone-conducted and noisy air-conducted speech into a shared embedding space. A decoder is then utilized to reconstruct the target clean speech from the embedding features of both modalities. Additionally, skip connections are incorporated in BiNet to better capture the long-term and short-term temporal correlations in speech. Considering the significance of spectral components in speech perception, we adopt a multi-scale mel-spectrogram loss function as the training objective, which encourages the network to generate more plausible spectral details of the desired speech. The aforementioned backbone network design allows us to apply regularization constraints based on contrastive learning. By controlling the similarity between the embedding features of bone-conducted and noisy air-conducted speech, we impose two regularization constraints on BiNet. When the embedding features of these two modalities exhibit higher similarity, the proposed BiNet achieves superior speech enhancement performance. Extensive experiments conducted on a recorded dataset of bone-conducted/air-conducted speech validate our approach. By combining the proposed model with contrastive learning regularization constraints, our method outperforms baseline models and several recent multimodal speech enhancement systems in terms of PESQ and STOI metrics. </p>
-<h2 id="Samples"><a href="#Samples" class="headerlink" title="Samples"></a>Samples</h2><p>We encourage our readers to listen to the following audio samples in order to experience the audio quality of our enhanced speech.</p>
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>-10 dB</td>
-      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/clean.wav" controls></td>
-      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/bone.wav" controls></td>
-      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/noisy.wav" controls></td>
-      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/res.wav" controls></td>
-      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/dn.wav" controls></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/dccrn.wav" controls></td>   
-      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/simple_fuse.wav" controls></td>
-      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/inv.wav" controls></td>
-      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/tt.wav" controls></td>
-      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/tt_clip.wav" controls></td>     
-      <td></td>
-    </tr>
-    </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>-5 dB</td>
-      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/clean.wav" controls></td>
-      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/bone.wav" controls></td>
-      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/noisy.wav" controls></td>
-      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/res.wav" controls></td>
-      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/dn.wav" controls></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/dccrn.wav" controls></td>   
-      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/simple_fuse.wav" controls></td>
-      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/inv.wav" controls></td>
-      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/tt.wav" controls></td>
-      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/tt_clip.wav" controls></td>     
-      <td></td>
-    </tr>
-    </tr>
-  </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>0 dB</td>
-      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/clean.wav" controls></td>
-      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/bone.wav" controls></td>
-      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/noisy.wav" controls></td>
-      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/res.wav" controls></td>
-      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/dn.wav" controls></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/dccrn.wav" controls></td>   
-      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/simple_fuse.wav" controls></td>
-      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/inv.wav" controls></td>
-      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/tt.wav" controls></td>
-      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/tt_clip.wav" controls></td>     
-      <td></td>
-    </tr>
-    </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-    </tr>
-    <tr>
-      <td>5 dB</td>
-      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/clean.wav" controls></td>
-      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/bone.wav" controls></td>
-      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/noisy.wav" controls></td>
-      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/res.wav" controls></td>
-      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/dn.wav" controls></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/dccrn.wav" controls></td>   
-      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/simple_fuse.wav" controls></td>
-      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/inv.wav" controls></td>
-      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/tt.wav" controls></td>
-      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/tt_clip.wav" controls></td>     
-      <td></td>
-    </tr>
-    </tbody>
-  <colgroup>
-  </colgroup>
-</table>
-
-]]></content>
-      <categories>
-        <category>Speech Enhancement</category>
-      </categories>
-      <tags>
-        <tag>Deep Neural Network</tag>
-        <tag>Bone-conducted Speech Enhancement</tag>
-      </tags>
   </entry>
   <entry>
     <title>A Two-Stage Approach to Quality Restoration of Bone-Conducted Speech</title>
@@ -1580,335 +1302,615 @@
       </tags>
   </entry>
   <entry>
-    <title>CTF-MNMF demo</title>
-    <url>/2023/03/27/CTFMNMF_demo/</url>
-    <content><![CDATA[<p>作者: Taihui Wang<br>Email: <a href="mailto:&#119;&#97;&#x6e;&#x67;&#x74;&#97;&#105;&#104;&#117;&#x69;&#x40;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x69;&#111;&#x61;&#x2e;&#x61;&#99;&#46;&#x63;&#x6e;">&#119;&#97;&#x6e;&#x67;&#x74;&#97;&#105;&#104;&#117;&#x69;&#x40;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x69;&#111;&#x61;&#x2e;&#x61;&#99;&#46;&#x63;&#x6e;</a></p>
-<h1 id="Convolutive-Transfer-Function-Based-Multichannel-Nonnegative-Matrix-Factorization-for-Overdetermined-Blind-Source-Separation"><a href="#Convolutive-Transfer-Function-Based-Multichannel-Nonnegative-Matrix-Factorization-for-Overdetermined-Blind-Source-Separation" class="headerlink" title="Convolutive Transfer Function-Based Multichannel Nonnegative Matrix Factorization for Overdetermined Blind Source Separation"></a>Convolutive Transfer Function-Based Multichannel Nonnegative Matrix Factorization for Overdetermined Blind Source Separation</h1><p>Taihui Wang <sup>1</sup><sup>, 2</sup>  , Feiran Yang <sup>3</sup>  , Member, IEEE, and Jun Yang <sup>1</sup><sup>, 2</sup>  , Senior Member, IEEE</p>
-<p><sup>1</sup>  Key Laboratory of Noise and Vibration Research, Institute of Acoustics, Chinese Academy of Sciences, Beijing,<br>China</p>
-<p> <sup>2</sup> University of Chinese Academy of Sciences, Beijing, China</p>
-<p> <sup>3</sup> State Key Laboratory of Acoustics, Institute of Acoustics, Chinese Academy of Sciences, Beijing, China</p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Most multichannel blind source separation (BSS) approaches rely on a spatial model to encode the transfer functions from sources to microphones and a source model to encode the source power spectral density. The rank-1 spatial model has been widely exploited in independent component analysis (ICA), independent vector analysis (IVA), and independent low-rank matrix analysis (ILRMA). The full-rank spatial model is also considered in many BSS approaches, such as full-rank spatial covariance matrix analysis (FCA), multichannel nonnegative matrix factorization (MNMF), and FastMNMF, which can improve the separation performance in the case of long reverberation times. This paper proposes a new MNMF framework based on the convolutive transfer function (CTF) for overdetermined BSS. The time-domain convolutive mixture model is approximated by a frequency-wise convolutive mixture model instead of the widely adopted frequency-wise instantaneous mixture model. The iterative projection algorithm is adopted to estimate the demixing matrix, and the multiplicative update rule is employed to estimate nonnegative matrix factorization (NMF) parameters. Finally, the source image is reconstructed using a multichannel Wiener filter. The advantages of the proposed method are twofold. First, the CTF approximation enables us to use a short window to represent long impulse responses. Second, the full-rank spatial model can be derived based on the CTF approximation and slowly time-variant source variances, and close relationships between the proposed method and ILRMA, FCA, MNMF and FastMNMF are revealed. Extensive experiments show that the proposed algorithm achieves a higher separation performance than ILRMA and FastMNMF in reverberant environments.</p>
-<h2 id="Separated-audio-samples"><a href="#Separated-audio-samples" class="headerlink" title="Separated audio samples"></a>Separated audio samples</h2><p>The following table shows an example of the 2-music source separation task, where the public NMF model is used and the number of bases is set to 32.  The reverberation time is 470 ms, and the channel number is 6. </p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-c3ow">Source 1</th>
-    <th class="tg-c3ow">Source 2</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-c3ow">Clean reverberant sources</td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">Mixture at the first microphone</td>
-    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
-    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/sep1UsingCTFMNMF-SDR.wav?raw=true" controls></td>
-    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/musicSignals/2-musicSourceUsing6micsWithReverberationTime470ms/sep2UsingCTFMNMF-SDR.wav?raw=true" controls></td>
-  </tr>
-</tbody>
-</table>
-
-
-<span id="more"></span>
-
-
-
-<p>The following table shows an example of the 2-speech source separation task, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 470 ms, and the channel number is 6.</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-c3ow">Source 1</th>
-    <th class="tg-c3ow">Source 2</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-c3ow">Clean reverberant sources</td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">Mixture at the first microphone</td>
-    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
-    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/separated1.wav?raw=true" controls></td>
-    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime470ms/separated2.wav?raw=true" controls></td>
-  </tr>
-</tbody>
-</table>
-
-<p>The following table shows an example of the 2-speech source separation task, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 1300 ms, and the channel number is 6.</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-c3ow">Source 1</th>
-    <th class="tg-c3ow">Source 2</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-c3ow">Clean reverberant sources</td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/image1.wav?raw=true" controls></td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/image2.wav?raw=true" controls></td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">Mixture at the first microphone</td>
-    <td class="tg-c3ow" colspan="2"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/mixture.wav?raw=true" controls></td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">Separated sources uing CTF-MNMF</td>
-    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/separated1.wav?raw=true" controls></td>
-    <td class="tg-baqh"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/2-speechSourceUsing6micsWithReverberationTime1300ms/separated2.wav?raw=true" controls></td>
-  </tr>
-</tbody>
-</table>
-
-
-
-<p>The following table shows an example of the 4- speech source separation tast, where the private NMF model is used and the number of bases is set to 2.  The reverberation time is 470 ms, and the channel number is 8.</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0p91{border-color:inherit;font-family:"Times New Roman", Times, serif !important;text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-iucd{border-color:inherit;font-family:"Times New Roman", Times, serif !important;text-align:left;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-iucd"></th>
-    <th class="tg-c3ow">Source 1</th>
-    <th class="tg-c3ow">Source 2</th>
-    <th class="tg-0pky">Source 3</th>
-    <th class="tg-0pky">Source 4</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0p91">Clean sources</td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image1.wav?raw=true" controls></td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image2.wav?raw=true" controls></td>
-    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image3.wav?raw=true" controls></td>
-    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/image4.wav?raw=true" controls></td>
-  </tr>
-  <tr>
-    <td class="tg-0p91">Mixture at the first microphone</td>
-    <td class="tg-c3ow" colspan="4"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/mixture.wav?raw=true" controls></td>
-  </tr>
-  <tr>
-    <td class="tg-0p91">Separated sources uing CTF-MNMF</td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep1UsingCTFMNMF-SDR.wav?raw=true" controls></td>
-    <td class="tg-c3ow"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep2UsingCTFMNMF-SDR.wav?raw=true" controls></td>
-    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep3UsingCTFMNMF-SDR.wav?raw=true" controls></td>
-    <td class="tg-0pky"><audio src="https://github.com/TaihuiWang/SeparatedAudioSamplesUsingCTF-MNMF/blob/main/speechSignals/4-speechSourceUsing8micsWithReverberationTime470ms/sep4UsingCTFMNMF-SDR.wav?raw=true" controls></td>
-  </tr>
-</tbody>
-</table>
-## Other samples
-
-<p>For more audio samples, the reader is referred to <a href="https://github.com/TaihuiWang/CTF-MNMF">TaihuiWang/CTF-MNMF (github.com)</a></p>
-]]></content>
-      <categories>
-        <category>Blind Source Separation</category>
-      </categories>
-      <tags>
-        <tag>Blind Source Separation</tag>
-        <tag>Nonnegative Matrix Analysis</tag>
-        <tag>Convolutive Transfer function</tag>
-        <tag>Spatial Covariance Matrix</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TriU-Net demo</title>
-    <url>/2023/03/20/TriU-Net_demo/</url>
-    <content><![CDATA[<p>作者: Kelan Kuang<br>Email: <a href="mailto:&#x6b;&#x75;&#97;&#x6e;&#x67;&#107;&#101;&#x6c;&#x61;&#x6e;&#x40;&#109;&#x61;&#x69;&#108;&#x2e;&#x69;&#111;&#97;&#46;&#x61;&#99;&#x2e;&#99;&#x6e;">&#x6b;&#x75;&#97;&#x6e;&#x67;&#107;&#101;&#x6c;&#x61;&#x6e;&#x40;&#109;&#x61;&#x69;&#108;&#x2e;&#x69;&#111;&#97;&#46;&#x61;&#99;&#x2e;&#99;&#x6e;</a></p>
-<h1 id="Multi-Channel-Speech-Enhancement-results"><a href="#Multi-Channel-Speech-Enhancement-results" class="headerlink" title="Multi-Channel Speech Enhancement results"></a>Multi-Channel Speech Enhancement results</h1><p>This repo shows enhanced speech of TriU-Net and other models.</p>
-<h2 id="Real-recordings"><a href="#Real-recordings" class="headerlink" title="Real recordings"></a>Real recordings</h2><p>SNR: -5 dB</p>
-<p>Spk 1 is a 24-year-old male, while spk 2 is a 24-year-old female. Both spk 1 and spk 2 speek in Mandarin. </p>
+    <title>Multi-Modal Speech Enhancement with BiNet and Contrastive Learning</title>
+    <url>/2024/02/26/demo/</url>
+    <content><![CDATA[<p>Author: Changtao Li<br>Email: <a href="mailto:&#108;&#105;&#99;&#x68;&#x61;&#110;&#103;&#116;&#97;&#111;&#64;&#x6d;&#x61;&#105;&#108;&#46;&#x69;&#111;&#x61;&#46;&#x61;&#99;&#x2e;&#x63;&#110;">&#108;&#105;&#99;&#x68;&#x61;&#110;&#103;&#116;&#97;&#111;&#64;&#x6d;&#x61;&#105;&#108;&#46;&#x69;&#111;&#x61;&#46;&#x61;&#99;&#x2e;&#x63;&#110;</a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>This paper investigates the joint use of bone-conducted and air-conducted speech in a multimodal speech enhancement framework. Starting from the backbone network architecture, we design a temporal two-tower network named after BiNet, capable of directly processing both bone-conducted and noisy air-conducted speech inputs. BiNet employs two independent encoders to map bone-conducted and noisy air-conducted speech into a shared embedding space. A decoder is then utilized to reconstruct the target clean speech from the embedding features of both modalities. Additionally, skip connections are incorporated in BiNet to better capture the long-term and short-term temporal correlations in speech. Considering the significance of spectral components in speech perception, we adopt a multi-scale mel-spectrogram loss function as the training objective, which encourages the network to generate more plausible spectral details of the desired speech. The aforementioned backbone network design allows us to apply regularization constraints based on contrastive learning. By controlling the similarity between the embedding features of bone-conducted and noisy air-conducted speech, we impose two regularization constraints on BiNet. When the embedding features of these two modalities exhibit higher similarity, the proposed BiNet achieves superior speech enhancement performance. Extensive experiments conducted on a recorded dataset of bone-conducted/air-conducted speech validate our approach. By combining the proposed model with contrastive learning regularization constraints, our method outperforms baseline models and several recent multimodal speech enhancement systems in terms of PESQ and STOI metrics. </p>
+<h2 id="Samples"><a href="#Samples" class="headerlink" title="Samples"></a>Samples</h2><p>We encourage our readers to listen to the following audio samples in order to experience the audio quality of our enhanced speech.</p>
 <table>
   <tbody>
     <tr>
-        <th>Signals </th>
-        <th>Spk 1 babble</th>
-        <th>Spk 2 babble</th>
-        <th>Spk 1 f16</th>
-        <th>Spk 2 f16</th>
     </tr>
     <tr>
-      <td>noisy</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_synth_kkl_babble_snr-5.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/9ULA_synth_kkl_babble_snr-5.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_synth_yzh_babble_snr-5.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/9ULA_synth_yzh_babble_snr-5.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_synth_kkl_babble_snr-5.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/9ULA_synth_kkl_f16_snr-5.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_synth_yzh_f16_snr-5.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/9ULA_synth_yzh_f16_snr-5.wav" controls></td>
+      <td>-10 dB</td>
+      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/clean.wav" controls></td>
+      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/bone.wav" controls></td>
+      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/noisy.wav" controls></td>
+      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/res.wav" controls></td>
+      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/dn.wav" controls></td>
     </tr>
     <tr>
-      <td>clean</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_kkl_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/9ULA_kkl_clean.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_yzh_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/9ULA_yzh_clean.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_kkl_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/9ULA_kkl_clean.wav" controls></td>      
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/9ULA_yzh_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/9ULA_yzh_clean.wav" controls></td>
+      <td></td>
+      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/dccrn.wav" controls></td>   
+      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/simple_fuse.wav" controls></td>
+      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/inv.wav" controls></td>
+      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/tt.wav" controls></td>
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_10/tt_clip.wav" controls></td>     
+      <td></td>
     </tr>
-    <tr>
-      <td>oracl MB-MVDR</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_oracle_MBMVDR_kkl_babble_snr-5_pesq1.09_1.36.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_oracle_MBMVDR_kkl_babble_snr-5_pesq1.09_1.36.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_oracle_MBMVDR_yzh_babble_snr-5_pesq1.06_1.27.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_oracle_MBMVDR_yzh_babble_snr-5_pesq1.06_1.27.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_oracle_MBMVDR_kkl_f16_snr-5_pesq1.06_1.3.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_oracle_MBMVDR_kkl_f16_snr-5_pesq1.06_1.3.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_oracle_MBMVDR_yzh_f16_snr-5_pesq1.04_1.25.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_oracle_MBMVDR_yzh_f16_snr-5_pesq1.04_1.25.wav" controls></td>
-    </tr>
-    <tr>
-      <td>EaBNet</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_EaBNet_kkl_babble_snr-5_pesq1.09_1.27.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_EaBNet_kkl_babble_snr-5_pesq1.09_1.27.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_EaBNet_yzh_babble_snr-5_pesq1.06_1.33.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_EaBNet_yzh_babble_snr-5_pesq1.06_1.33.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_EaBNet_kkl_f16_snr-5_pesq1.06_1.37.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_EaBNet_kkl_f16_snr-5_pesq1.06_1.37.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_EaBNet_yzh_f16_snr-5_pesq1.04_1.41.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_EaBNet_yzh_f16_snr-5_pesq1.04_1.41.wav" controls></td>
-    </tr>
-    <tr>
-      <td>FaSNet</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_FaSNet_kkl_babble_snr-5_pesq1.09_1.24.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_FaSNet_kkl_babble_snr-5_pesq1.09_1.24.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_FaSNet_yzh_babble_snr-5_pesq1.06_1.23.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_FaSNet_yzh_babble_snr-5_pesq1.06_1.23.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_FaSNet_kkl_f16_snr-5_pesq1.06_1.35.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_FaSNet_kkl_f16_snr-5_pesq1.06_1.35.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_FaSNet_yzh_f16_snr-5_pesq1.04_1.47.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_FaSNet_yzh_f16_snr-5_pesq1.04_1.47.wav" controls></td>
-    </tr>
-    <tr>
-      <td>Model A</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_ModelA_kkl_babble_snr-5_pesq1.09_1.42.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_ModelA_kkl_babble_snr-5_pesq1.09_1.42.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_ModelA_yzh_babble_snr-5_pesq1.06_1.26.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_ModelA_yzh_babble_snr-5_pesq1.06_1.26.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_ModelA_kkl_f16_snr-5_pesq1.06_1.6.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_ModelA_kkl_f16_snr-5_pesq1.06_1.6.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_ModelA_yzh_f16_snr-5_pesq1.04_1.77.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_ModelA_yzh_f16_snr-5_pesq1.04_1.77.wav" controls></td>
-    </tr>
-    <tr>
-        <td><b>TriU-Net</b></td>
-        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_TriU-Net_kkl_babble_snr-5_pesq1.09_1.7.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/babble/real_enh_TriU-Net_kkl_babble_snr-5_pesq1.09_1.7.wav" controls></td>
-        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_TriU-Net_yzh_babble_snr-5_pesq1.06_1.65.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/babble/real_enh_TriU-Net_yzh_babble_snr-5_pesq1.06_1.65.wav" controls></td>
-        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_TriU-Net_kkl_f16_snr-5_pesq1.06_1.84.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk1/f16/real_enh_TriU-Net_kkl_f16_snr-5_pesq1.06_1.84.wav" controls></td>
-        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/real_enh_TriU-Net_yzh_f16_snr-5_pesq1.04_1.9.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/real%20recording/spk2/f16/real_enh_TriU-Net_yzh_f16_snr-5_pesq1.04_1.9.wav" controls></td>
-    </tr>
-  </tbody>
+    </tbody>
   <colgroup>
-    <col style="width: 5%;">
-    <col style="width: 5%;">
-    <col style="width: 5%;">
-    <col style="width: 5%;">
   </colgroup>
 </table>
 
-
-<span id="more"></span>
-
-
-
-
-<h2 id="Synthetic-Data"><a href="#Synthetic-Data" class="headerlink" title="Synthetic Data"></a>Synthetic Data</h2><table>
+<table>
   <tbody>
     <tr>
-        <th>Signals </th>
-        <th>Spk 1 SNR:-5.36 dB</th>
-        <th>Spk 2 SNR:-3.43 dB</th>
     </tr>
     <tr>
-      <td>noisy</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_noisy.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_noisy.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_noisy.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_noisy.wav" controls></td>
+      <td>-5 dB</td>
+      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/clean.wav" controls></td>
+      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/bone.wav" controls></td>
+      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/noisy.wav" controls></td>
+      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/res.wav" controls></td>
+      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/dn.wav" controls></td>
     </tr>
     <tr>
-      <td>clean</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_clean.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_clean.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_clean.wav" controls></td>
+      <td></td>
+      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/dccrn.wav" controls></td>   
+      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/simple_fuse.wav" controls></td>
+      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/inv.wav" controls></td>
+      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/tt.wav" controls></td>
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/min_5/tt_clip.wav" controls></td>     
+      <td></td>
     </tr>
-    <tr>
-      <td>EaBNet</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_EaBNet.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_EaBNet.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_EaBNet.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_EaBNet.wav" controls></td>
-    </tr>
-    <tr>
-      <td>FaSNet</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_FaSNet.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_FaSNet.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_FaSNet.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_FaSNet.wav" controls></td>
-    </tr>
-    <tr>
-      <td>Model A</td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_ModelA.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_ModelA.wav" controls></td>
-      <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_ModelA.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_ModelA.wav" controls></td>
-    </tr>
-    <tr>
-        <td><b>TriU-Net</b></td>
-        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/1_sir-5.36dB_noisyR0.95_TriU-Net.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk1/1_sir-5.36dB_noisyR0.95_TriU-Net.wav" controls></td>
-        <td><img src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/spectrograms/4_sir-3.43dB_noisyR0.67_TriU-Net.jpg"><audio src="https://raw.githubusercontent.com/CaA23187/TriU-Net_demo/main/test%20set/spk2/4_sir-3.43dB_noisyR0.67_TriU-Net.wav" controls></td>
     </tr>
   </tbody>
   <colgroup>
-    <col style="width: 5%;">
-    <col style="width: 5%;">
-    <col style="width: 5%;">
-    <col style="width: 5%;">
   </colgroup>
 </table>
 
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>0 dB</td>
+      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/clean.wav" controls></td>
+      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/bone.wav" controls></td>
+      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/noisy.wav" controls></td>
+      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/res.wav" controls></td>
+      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/dn.wav" controls></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/dccrn.wav" controls></td>   
+      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/simple_fuse.wav" controls></td>
+      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/inv.wav" controls></td>
+      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/tt.wav" controls></td>
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/zero/tt_clip.wav" controls></td>     
+      <td></td>
+    </tr>
+    </tbody>
+  <colgroup>
+  </colgroup>
+</table>
 
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>5 dB</td>
+      <td> air-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/clean.wav" controls></td>
+      <td> bone-conducted speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/bone.wav" controls></td>
+      <td> noisy speech <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/noisy.wav" controls></td>
+      <td> UNet restoration <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/res.wav" controls></td>
+      <td> UNet denoising<audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/dn.wav" controls></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td> DCCRN <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/dccrn.wav" controls></td>   
+      <td> UNet early fusion <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/simple_fuse.wav" controls></td>
+      <td> involution <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/inv.wav" controls></td>
+      <td> BiNet w/o regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/tt.wav" controls></td>
+      <td> BiNet w/ regularization <audio src="https://github.com/changtaoli/mulit-modal-clip/raw/main/pos_5/tt_clip.wav" controls></td>     
+      <td></td>
+    </tr>
+    </tbody>
+  <colgroup>
+  </colgroup>
+</table>
 
-
-
-
-
-
-
-
-
-<h2 id="Other-samples"><a href="#Other-samples" class="headerlink" title="Other samples"></a>Other samples</h2><p>Other SNR scenarios  See <a href="https://github.com/CaA23187/TriU-Net_demo">https://github.com/CaA23187/TriU-Net_demo</a></p>
 ]]></content>
       <categories>
         <category>Speech Enhancement</category>
       </categories>
       <tags>
-        <tag>Multi-Channel Speech Enhancement</tag>
-        <tag>Beamforming</tag>
         <tag>Deep Neural Network</tag>
-        <tag>Microphone Array</tag>
+        <tag>Bone-conducted Speech Enhancement</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>subjective test of 4 enhanced speech</title>
+    <url>/2024/05/24/%E4%B8%BB%E8%A7%82%E6%B5%8B%E8%AF%95-online/</url>
+    <content><![CDATA[<p>Author: Kelan Kuang<br>Email: <a href="mailto:&#x6b;&#117;&#97;&#110;&#x67;&#107;&#x65;&#108;&#97;&#x6e;&#x40;&#109;&#x61;&#105;&#x6c;&#x2e;&#105;&#x6f;&#x61;&#x2e;&#97;&#x63;&#46;&#99;&#x6e;">&#x6b;&#117;&#97;&#110;&#x67;&#107;&#x65;&#108;&#97;&#x6e;&#x40;&#109;&#x61;&#105;&#x6c;&#x2e;&#105;&#x6f;&#x61;&#x2e;&#97;&#x63;&#46;&#99;&#x6e;</a></p>
+<h1 id="音频文件质量主观评价测试"><a href="#音频文件质量主观评价测试" class="headerlink" title="音频文件质量主观评价测试"></a>音频文件质量主观评价测试</h1><p>感谢参加本次音频文件主观测试。本次测试分为两个部分，首先是对来自不同系统的同一条语音进行打分（mean opinion score；MOS）；接着受试者需要从两条对比的语音中选择质量更好的一条（paired comparison test）。这两部分测试的具体内容会在每一部分测试的开始进行具体介绍。</p>
+<h2 id="MOS"><a href="#MOS" class="headerlink" title="MOS"></a>MOS</h2><table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>基准语音</td>
+      <td> 1分 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/MOS1__33_snr-13.21dB_noisyR0.95_ch1.wav" controls></td>
+      <td> 2分 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/MOS2__3_snr-14.68dB_noisyR0.81_out.wav" controls></td>
+      <td> 3-4分 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/MOS34__29_snr5.57dB_noisyR0.82_out.wav" controls></td>
+      <td> 5分 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/MOS5__3_snr-14.68dB_noisyR0.81_tgt.wav" controls></td>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+
+<p>请你对以下语音的可懂度进行打分，打分范围是1-5。其中5分表示语音可懂度很高，主观上完全可以接受，语音完全不刺耳。4分表示对语音的接受程度降低，但不反感该语音。3分表示可以感知到此语音的瑕疵，如电音等刺耳瑕疵。2分表示该语音的刺耳瑕疵非常明显。1分表示完全无法接受该语音且非常反感。我们给出了1分与5分的语音作为参考，你只需要聆听这些语音以获得语音质量的直观感受。请您以这两条语音作为基准，对以下语音样本进行打分。需要说明的是本次测试是为了对语音质量以及可懂度而非语音的内容进行评判，某些语音的口音可能比较重，请您忽略口音相关的问题。下面的每一个Group，例如Group1，包含来自4个不同的语音增强系统（s1-s4）的输出语音，请在评分后将分数记录在对应的Excel表格中。</p>
+<p>极低信噪比: </p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group1</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\FCN_nonCausal_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\ConvTasNet_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\DC_CRN_iAFF_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\1093\DenGCAN_iag2_0_(01)__1093_snr-13.61dB_noisyR0.85_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group2</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\FCN_nonCausal_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\ConvTasNet_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\DC_CRN_iAFF_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\5221\DenGCAN_iag2_0_(01)__5221_snr-14.96dB_noisyR0.82_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group3</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\FCN_nonCausal_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\ConvTasNet_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\DC_CRN_iAFF_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\7092\DenGCAN_iag2_0_(01)__7092_snr-12.86dB_noisyR0.81_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group4</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\FCN_nonCausal_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\ConvTasNet_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\DC_CRN_iAFF_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\8214\DenGCAN_iag2_0_(01)__8214_snr-13.32dB_noisyR0.87_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group5</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\FCN_nonCausal_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\ConvTasNet_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\DC_CRN_iAFF_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13082\DenGCAN_iag2_0_(01)__13082_snr-9.38dB_noisyR0.81_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group6</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\FCN_nonCausal_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\ConvTasNet_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\DC_CRN_iAFF_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\13759\DenGCAN_iag2_0_(01)__13759_snr-10.92dB_noisyR1.00_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group7</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\FCN_nonCausal_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\ConvTasNet_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\DC_CRN_iAFF_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-15_-9\20754\DenGCAN_iag2_0_(01)__20754_snr-13.13dB_noisyR0.91_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+<span id="more"></span>
+
+
+
+
+<p>低信噪比:</p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group8</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\FCN_nonCausal_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\ConvTasNet_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\DC_CRN_iAFF_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\7279\DenGCAN_iag2_0_(01)__7279_snr-5.92dB_noisyR0.99_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group9</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\FCN_nonCausal_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\ConvTasNet_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\DC_CRN_iAFF_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\8489\DenGCAN_iag2_0_(01)__8489_snr-3.93dB_noisyR0.89_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group10</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\FCN_nonCausal_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\ConvTasNet_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\DC_CRN_iAFF_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9588\DenGCAN_iag2_0_(01)__9588_snr-5.42dB_noisyR0.89_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group11</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\FCN_nonCausal_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\ConvTasNet_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\DC_CRN_iAFF_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\9673\DenGCAN_iag2_0_(01)__9673_snr-2.87dB_noisyR0.97_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group12</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\FCN_nonCausal_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\ConvTasNet_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\DC_CRN_iAFF_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\11298\DenGCAN_iag2_0_(01)__11298_snr-4.50dB_noisyR0.96_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group13</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\FCN_nonCausal_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\ConvTasNet_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\DC_CRN_iAFF_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\19490\DenGCAN_iag2_0_(01)__19490_snr-6.48dB_noisyR0.97_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group14</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\FCN_nonCausal_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\ConvTasNet_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\DC_CRN_iAFF_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-9_-2\21544\DenGCAN_iag2_0_(01)__21544_snr-3.47dB_noisyR0.92_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+
+<p>中信噪比:</p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group15</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\FCN_nonCausal_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\ConvTasNet_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\DC_CRN_iAFF_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\3239\DenGCAN_iag2_0_(01)__3239_snr-0.89dB_noisyR0.90_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group16</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\FCN_nonCausal_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\ConvTasNet_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\DC_CRN_iAFF_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5095\DenGCAN_iag2_0_(01)__5095_snr-0.23dB_noisyR0.81_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group17</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\FCN_nonCausal_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\ConvTasNet_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\DC_CRN_iAFF_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\5471\DenGCAN_iag2_0_(01)__5471_snr-0.50dB_noisyR0.97_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group18</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\FCN_nonCausal_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\ConvTasNet_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\DC_CRN_iAFF_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\6504\DenGCAN_iag2_0_(01)__6504_snr0.97dB_noisyR0.94_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group19</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\FCN_nonCausal_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\ConvTasNet_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\DC_CRN_iAFF_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\11750\DenGCAN_iag2_0_(01)__11750_snr3.00dB_noisyR0.98_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group20</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\FCN_nonCausal_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\ConvTasNet_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\DC_CRN_iAFF_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\13667\DenGCAN_iag2_0_(01)__13667_snr2.58dB_noisyR0.99_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group21</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\FCN_nonCausal_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\ConvTasNet_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\DC_CRN_iAFF_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_-2_5\20718\DenGCAN_iag2_0_(01)__20718_snr-0.59dB_noisyR0.98_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+
+<p>高信噪比:</p>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group22</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\FCN_nonCausal_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\ConvTasNet_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\DC_CRN_iAFF_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\3445\DenGCAN_iag2_0_(01)_10dB__3445_snr8.06dB_noisyR0.96_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group23</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\FCN_nonCausal_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\ConvTasNet_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\DC_CRN_iAFF_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4188\DenGCAN_iag2_0_(01)_10dB__4188_snr9.29dB_noisyR0.83_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group24</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\FCN_nonCausal_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\ConvTasNet_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\DC_CRN_iAFF_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\4698\DenGCAN_iag2_0_(01)_10dB__4698_snr9.54dB_noisyR0.87_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group25</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\FCN_nonCausal_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\ConvTasNet_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\DC_CRN_iAFF_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6033\DenGCAN_iag2_0_(01)_10dB__6033_snr9.82dB_noisyR0.84_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group26</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\FCN_nonCausal_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\ConvTasNet_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\DC_CRN_iAFF_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6209\DenGCAN_iag2_0_(01)_10dB__6209_snr6.79dB_noisyR0.91_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group27</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\FCN_nonCausal_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\ConvTasNet_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\DC_CRN_iAFF_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6289\DenGCAN_iag2_0_(01)_10dB__6289_snr5.06dB_noisyR0.98_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td>Group28</td>
+      <td> s1 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\FCN_nonCausal_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
+      <td> s2 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\ConvTasNet_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
+      <td> s3 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\DC_CRN_iAFF_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
+      <td> s4 <audio src="https://github.com/CaA23187/DenGCAN_demo/raw/main/snr_5_10\6917\DenGCAN_iag2_0_(01)_10dB__6917_snr8.12dB_noisyR0.88_out.wav" controls></td>
+    </tr>
+  </tbody>
+  <colgroup>
+  </colgroup>
+</table>
+
+
+]]></content>
+      <categories>
+        <category>Speech Enhancement</category>
+      </categories>
+      <tags>
+        <tag>Deep Neural Network</tag>
+        <tag>Bone-conducted Speech Enhancement</tag>
       </tags>
   </entry>
 </search>
